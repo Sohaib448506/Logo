@@ -1,38 +1,313 @@
-.App {
+.main-image {
   text-align: center;
+
+  margin: 100px;
+}
+.main-image img {
+  background-color: #020926;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.forWidth {
+  width: 700px;
+  background: #020926;
+  margin: auto;
+  padding: 90px;
+}
+.container-logo {
+  position: relative;
+}
+.img1 img {
+  position: absolute;
+  top: 5%;
+  left: 37%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img2 img {
+  position: absolute;
+  top: 41%;
+  left: 31%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.img3 img {
+  position: absolute;
+  top: 81%;
+  left: 37%;
+}
+
+.img4 img {
+  position: absolute;
+  top: 81%;
+  right: 37%;
+}
+.img5 img {
+  position: absolute;
+  top: 41%;
+  right: 31%;
+}
+
+.img6 img {
+  position: absolute;
+  top: 5%;
+  right: 37%;
+}
+/* .img1 img,
+.img2 img,
+.img3 img,
+.img4 img,
+.img5 img,
+.img6 img {
+  width: 7%;
+} */
+.img1 img:hover,
+.img2 img:hover,
+.img3 img:hover,
+.img4 img:hover,
+.img5 img:hover,
+.img6 img:hover {
+  filter: grayscale(1);
+}
+.hexagon {
+  position: relative;
+  width: 300px;
+  height: 173.21px;
+  background-color: #020926;
+  margin: auto;
+  transform: rotate(90deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 86.6px solid #020926;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.6px solid #020926;
+}
+
+.hexagon p {
+  padding: 0px 83px;
+  transform: rotate(-90deg);
+}
+
+.description {
+  position: absolute;
+  top: 173px;
+  left: 649px;
   color: white;
+  display: none;
 }
-
-.App-link {
-  color: #61dafb;
+.description.active {
+  display: block !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.img1 .description {
+  display: block;
+}
+@media screen and (min-width: 1900px) {
+  .img1 img {
+    top: 4%;
+    left: 42%;
   }
-  to {
-    transform: rotate(360deg);
+  .img6 img {
+    top: 4%;
+    right: 42%;
+  }
+  .img2 img {
+    top: 41%;
+    left: 38%;
+  }
+  .img5 img {
+    top: 41%;
+    right: 38%;
+  }
+  .img3 img {
+    top: 81%;
+    left: 42%;
+  }
+  .img4 img {
+    top: 81%;
+    right: 42%;
+  }
+  .description {
+    font-size: 18px;
+    top: 32%;
+    left: 44.1%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .img1 img {
+    top: 4%;
+    left: 34%;
+  }
+  .img6 img {
+    top: 4%;
+    right: 28%;
+  }
+  .img2 img {
+    top: 42%;
+    left: 25%;
+  }
+  .img3 img {
+    top: 81%;
+    left: 34%;
+  }
+  .img4 img {
+    right: 29%;
+  }
+  .img5 img {
+    top: 41%;
+    right: 20%;
+  }
+  .description {
+    top: 32%;
+    left: 38%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img1 img,
+  .img2 img,
+  .img3 img,
+  .img4 img,
+  .img5 img,
+  .img6 img {
+    width: 9%;
+  }
+  .forWidth img {
+    width: 50%;
+  }
+  .img1 img {
+    top: 6%;
+    left: 47%;
+  }
+  .img2 img {
+    left: 38%;
+  }
+  .img3 img {
+    top: 79%;
+    left: 47%;
+  }
+  .img6 img {
+    top: 6%;
+    right: 9%;
+  }
+  .img5 img {
+    top: 42%;
+    right: -2%;
+  }
+  .img4 img {
+    right: 9%;
+  }
+  .description {
+    top: 32%;
+    left: 49%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .img1 img,
+  .img2 img,
+  .img3 img,
+  .img4 img,
+  .img5 img,
+  .img6 img {
+    width: 20%;
+  }
+  .img1 img {
+    top: 7%;
+    left: 83%;
+  }
+
+  .img6 img {
+    top: 7%;
+    right: -69%;
+  }
+  .img2 img {
+    left: 66%;
+  }
+  .img5 img {
+    right: -88%;
+  }
+  .img3 img {
+    left: 83%;
+  }
+  .img4 img {
+    right: -69%;
+    top: 79%;
+  }
+  .description {
+    top: 32%;
+    left: 89%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .img1 img {
+    top: 7%;
+    left: 97%;
+  }
+  .img6 img {
+    top: 7%;
+    right: -88%;
+  }
+  .img2 img {
+    left: 74%;
+  }
+  .img5 img {
+    right: -112%;
+  }
+  .img3 img {
+    left: 96%;
+  }
+  .img4 img {
+    right: -94%;
+    top: 79%;
+  }
+  .description {
+    top: 30%;
+    left: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .img1 img,
+  .img2 img,
+  .img3 img,
+  .img4 img,
+  .img5 img,
+  .img6 img {
+    width: 30%;
+  }
+  .img1 img {
+    top: 5%;
+    left: 108%;
+  }
+  .img6 img {
+    top: 5%;
+    right: -123%;
+  }
+  .img2 img {
+    left: 80%;
+  }
+  .img5 img {
+    right: -150%;
+  }
+  .img3 img {
+    left: 109%;
+  }
+  .img4 img {
+    right: -126%;
+    top: 79%;
+  }
+  .description {
+    top: 30%;
+    left: 117%;
   }
 }
