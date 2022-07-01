@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./App.css";
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import mainImage from "./asset/diagram-01.png";
 import img1 from "./asset/diagram-02.png";
 import img2 from "./asset/diagram-03.png";
@@ -58,127 +62,155 @@ function App() {
   };
   return (
     <>
-      <div className="container container-logo">
-        <div className="main-image">
-          <div className="forWidth">
-            <a href="">
-              {" "}
-              <img src={mainImage} alt="" />
-            </a>
-          </div>
-        </div>
-        <div
-          className="img1"
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          <a href="">
-            {" "}
-            <img src={img1} alt="" />
-          </a>
-        </div>
-        <div
-          className="img2"
-          onMouseOver={handleMouseOver2}
-          onMouseOut={handleMouseOut2}
-        >
-          <a href="">
-            {" "}
-            <img src={img4} alt="" />
-          </a>
-        </div>
-        <div
-          className="img3"
-          onMouseOver={handleMouseOver3}
-          onMouseOut={handleMouseOut3}
-        >
-          <a href="">
-            {" "}
-            <img src={img2} alt="" />
-          </a>
-        </div>
-        <div
-          className="img4"
-          onMouseOver={handleMouseOver4}
-          onMouseOut={handleMouseOut4}
-        >
-          <a href="">
-            {" "}
-            <img src={img3} alt="" />
-          </a>
-        </div>
-        <div
-          className="img5"
-          onMouseOver={handleMouseOver5}
-          onMouseOut={handleMouseOut5}
-        >
-          <a href="">
-            {" "}
-            <img src={img6} alt="" />
-          </a>
-        </div>
-        <div
-          className="img6"
-          onMouseOver={handleMouseOver6}
-          onMouseOut={handleMouseOut6}
-        >
-          <a href="">
-            {" "}
-            <img src={img5} alt="" />
-          </a>
-        </div>
-        <div className={isHovering ? "description active" : "description"}>
-          <div className="hexagon p1">
-            <p>
-              {" "}
-              Img 1Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt eaq
-            </p>
-          </div>
-        </div>
-        <div className={isHovering2 ? "description active" : "description"}>
-          <div className="hexagon p2">
-            <p>
-              {" "}
-              Img2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
-            </p>
-          </div>
-        </div>
-        <div className={isHovering3 ? "description active" : "description"}>
-          <div className="hexagon p2">
-            <p>
-              {" "}
-              Img3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
-            </p>
-          </div>
-        </div>
-        <div className={isHovering4 ? "description active" : "description"}>
-          <div className="hexagon p2">
-            <p>
-              {" "}
-              Img4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
-            </p>
-          </div>
-        </div>
-        <div className={isHovering5 ? "description active" : "description"}>
-          <div className="hexagon p2">
-            <p>
-              {" "}
-              Img5 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
-            </p>
-          </div>
-        </div>
-        <div className={isHovering6 ? "description active" : "description"}>
-          <div className="hexagon p2">
-            <p>
-              {" "}
-              Img6 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
-            </p>
+      <div className="row">
+        <div className="col-12 justify-content-center">
+          <div className="container container-logo">
+            <div className="main-image">
+              <div className="forWidth d-flex">
+                <a href="">
+                  {" "}
+                  <img src={mainImage} alt="" />
+                </a>
+              </div>
+            </div>
+            <div
+              className="img1 d-flex"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="">
+                {" "}
+                <img src={img1} alt="" />
+              </a>
+            </div>
+            <div
+              className="img2 d-flex"
+              onMouseOver={handleMouseOver2}
+              onMouseOut={handleMouseOut2}
+            >
+              <a href="">
+                {" "}
+                <img src={img4} alt="" />
+              </a>
+            </div>
+            <div
+              className="img3 d-flex"
+              onMouseOver={handleMouseOver3}
+              onMouseOut={handleMouseOut3}
+            >
+              <a href="">
+                {" "}
+                <img src={img2} alt="" />
+              </a>
+            </div>
+            <div
+              className="img4 d-flex"
+              onMouseOver={handleMouseOver4}
+              onMouseOut={handleMouseOut4}
+            >
+              <a href="">
+                {" "}
+                <img src={img3} alt="" />
+              </a>
+            </div>
+            <div
+              className="img5 d-flex"
+              onMouseOver={handleMouseOver5}
+              onMouseOut={handleMouseOut5}
+            >
+              <a href="">
+                {" "}
+                <img src={img6} alt="" />
+              </a>
+            </div>
+            <div
+              className="img6 d-flex"
+              onMouseOver={handleMouseOver6}
+              onMouseOut={handleMouseOut6}
+            >
+              <a href="">
+                {" "}
+                <img src={img5} alt="" />
+              </a>
+            </div>
+            <div
+              className={
+                isHovering ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p1">
+                <p>
+                  {" "}
+                  Img 1Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt eaq
+                </p>
+              </div>
+            </div>
+            <div
+              className={
+                isHovering2 ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p2">
+                <p>
+                  {" "}
+                  Img2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
+                </p>
+              </div>
+            </div>
+            <div
+              className={
+                isHovering3 ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p2">
+                <p>
+                  {" "}
+                  Img3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
+                </p>
+              </div>
+            </div>
+            <div
+              className={
+                isHovering4 ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p2">
+                <p>
+                  {" "}
+                  Img4 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
+                </p>
+              </div>
+            </div>
+            <div
+              className={
+                isHovering5 ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p2">
+                <p>
+                  {" "}
+                  Img5 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
+                </p>
+              </div>
+            </div>
+            <div
+              className={
+                isHovering6 ? " d-flex description active" : "description"
+              }
+            >
+              <div className="hexagon p2">
+                <p>
+                  {" "}
+                  Img6 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nihil dolores qui commodi inventore? Deserunt aut nesciunt e
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
